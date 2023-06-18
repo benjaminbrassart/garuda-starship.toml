@@ -75,7 +75,6 @@ $custom\
 $sudo\
 $cmd_duration\
 $line_break\
-$jobs\
 $battery\
 $time\
 $os\
@@ -85,6 +84,7 @@ $character\
 """
 
 right_format = """
+$jobs\
 $status\
 """
 
@@ -170,6 +170,15 @@ pipestatus_format = '\[$pipestatus\] => [$common_meaning$signal_name$maybe_int](
 map_symbol = false
 disabled = false
 pipestatus = false
+
+[jobs]
+threshold = 1
+number_threshold = 1
+symbol_threshold = 1
+symbol = 'J'
+format = '[\[$number\]]($style) '
+style = 'blue'
+disabled = false
 
 [aws]
 symbol = "  "
